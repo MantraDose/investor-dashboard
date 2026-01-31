@@ -64,7 +64,19 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Environment
 
-No environment variables are required for local development with mock data. When the API and auth are added, variables (e.g. `NEXT_PUBLIC_*`, API keys) will be documented here or in `.env.example`.
+No environment variables are required for local development with mock data. Copy `.env.example` to `.env.local` and fill in values if you want the Overview page to use live Zoho Inventory data.
+
+**Zoho Inventory (optional):** When set, the Overview page fetches metrics and product performance from Zoho Inventory. When unset or when Zoho fails, the app falls back to mock data.
+
+| Variable | Description |
+|----------|-------------|
+| `ZOHO_CLIENT_ID` | OAuth client ID from [Zoho Developer Console](https://accounts.zoho.com/developerconsole) |
+| `ZOHO_CLIENT_SECRET` | OAuth client secret |
+| `ZOHO_REFRESH_TOKEN` | Refresh token (use `access_type=offline` when authorizing) |
+| `ZOHO_ORGANIZATION_ID` | Your Zoho Inventory organization ID (required for API calls) |
+| `ZOHO_DC` | Data center: `com`, `eu`, `in`, `com.au`, or `ca` (default: `com`) |
+
+Do not commit `.env.local` or any file containing real credentials.
 
 ## Deployment
 

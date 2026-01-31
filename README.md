@@ -68,7 +68,27 @@ No environment variables are required for local development with mock data. When
 
 ## Deployment
 
-The app is suitable for deployment on [Vercel](https://vercel.com/) (or similar). Analytics can be enabled via `@vercel/analytics`.
+### GitHub
+
+The project is configured to use the **MantraDose/investor-dashboard** repository:
+
+```bash
+# Remote is already set. If you need to set it:
+git remote add origin git@github.com:MantraDose/investor-dashboard.git
+
+# After your first commit, push (ensure the repo exists on GitHub and you have access):
+git push -u origin main
+```
+
+If you use HTTPS instead of SSH: `https://github.com/MantraDose/investor-dashboard.git`
+
+### Vercel (first-time deploy)
+
+1. Go to [vercel.com](https://vercel.com) and sign in with GitHub.
+2. Click **Add New** → **Project** and import **MantraDose/investor-dashboard**.
+3. Vercel will detect Next.js; keep the default settings (Framework: Next.js, Build Command: `pnpm build`, Output Directory: `.next`).
+4. Click **Deploy**. Each push to `main` will trigger a new deployment.
+5. Optional: add `@vercel/analytics` for analytics.
 
 ## Roadmap
 

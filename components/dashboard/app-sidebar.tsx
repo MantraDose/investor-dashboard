@@ -75,8 +75,8 @@ export function AppSidebar() {
             <span className="text-sm font-bold text-primary-foreground">M</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-sm font-semibold">MantraDose</span>
-            <span className="text-xs text-muted-foreground">Investor Portal</span>
+            <span className="text-sm font-semibold">MantraMeds</span>
+            {/* <span className="text-xs text-muted-foreground">Investor Dashboard</span> */}
           </div>
         </Link>
       </SidebarHeader>

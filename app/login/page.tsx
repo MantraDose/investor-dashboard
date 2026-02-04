@@ -26,7 +26,7 @@ export default function LoginPage() {
 
     setIsLoading(true)
 
-    // Simulate API call - replace with actual magic link API
+    // Simulate API call - replace with actual login link API
     await new Promise((resolve) => setTimeout(resolve, 1500))
 
     setIsLoading(false)
@@ -51,7 +51,7 @@ export default function LoginPage() {
               <CardHeader className="text-center">
                 <CardTitle className="text-lg">Sign in to your account</CardTitle>
                 <CardDescription>
-                  Enter your email and we&apos;ll send you a magic link
+                  Enter your email and we&apos;ll send you a login link
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -84,7 +84,7 @@ export default function LoginPage() {
                       </>
                     ) : (
                       <>
-                        Send magic link
+                        Send login link
                         <ArrowRight className="h-4 w-4" />
                       </>
                     )}
@@ -104,10 +104,10 @@ export default function LoginPage() {
                 <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-lg">Check your email</CardTitle>
-                <CardDescription>
-                  We sent a magic link to
-                </CardDescription>
+                <CardTitle className="text-lg">We sent a login link to...</CardTitle>
+                {/* <CardDescription>
+                  We sent a login link to...
+                </CardDescription> */}
               </CardHeader>
               <CardContent className="text-center">
                 <p className="mb-4 font-medium text-foreground">{email}</p>

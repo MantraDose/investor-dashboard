@@ -30,6 +30,7 @@ import {
   Settings,
   LogOut,
   ChevronUp,
+  Instagram,
 } from "lucide-react"
 import { investorProfile } from "@/lib/mock-data"
 
@@ -48,6 +49,11 @@ const navItems = [
     title: "Marketing & Ads",
     href: "/marketing",
     icon: Megaphone,
+  },
+  {
+    title: "Social Media",
+    href: "/social",
+    icon: Instagram,
   },
   {
     title: "Historical Data",
@@ -75,8 +81,8 @@ export function AppSidebar() {
             <span className="text-sm font-bold text-primary-foreground">M</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-sm font-semibold">MantraMeds</span>
-            {/* <span className="text-xs text-muted-foreground">Investor Dashboard</span> */}
+            <span className="text-sm font-semibold">MantraDose</span>
+            <span className="text-xs text-muted-foreground">Investor Portal</span>
           </div>
         </Link>
       </SidebarHeader>
